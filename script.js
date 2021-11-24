@@ -25,7 +25,8 @@ console.log(results);
 const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let sum = 0;
 
-for (let i = 0; i < array1.length; i++) {
+for (let i = 0; i < array1.length; i++) 
+{
   sum += array1[i];
 }
 console.log(sum);
@@ -44,3 +45,35 @@ console.log(sum);
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
 
+let array = [1, 2, 3, 4, 5];
+
+function reverseArray(arr) 
+{
+  let outputArray = [];
+  for (let i = arr.length - 1; i >= 0; i--) 
+  {
+    outputArray.push(arr[i]);
+  }
+  return outputArray;
+}
+console.log(reverseArray(array));
+
+function reverseArrayInPlace(arr) 
+{
+  let midPoint = 0;
+  if (arr.length % 2 == 0) 
+  {
+    midPoint = arr.length / 2 - 1;
+  } else 
+  {
+    midPoint = arr.length / 2;
+  }
+  for (let i = 0; i <= midPoint; i++) 
+  {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - i - 1];
+    arr[arr.length - i - 1] = temp;
+  }
+  return arr;
+}
+console.log(reverseArrayInPlace(array));
