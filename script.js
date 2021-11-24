@@ -22,7 +22,13 @@ console.log(results);
 // Example output:
 // console.log(sum(range(1, 10))); // returns 55
 
+const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = 0;
 
+for (let i = 0; i < array1.length; i++) {
+  sum += array1[i];
+}
+console.log(sum);
 
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and
